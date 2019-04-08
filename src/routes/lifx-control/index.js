@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import LiFXControl from './Lifx-control';
+import LiFXControl from './lifx-control';
 import Layout from '../../components/Layout';
 
 async function action({ fetch }) {
