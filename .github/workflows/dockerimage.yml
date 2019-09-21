@@ -11,10 +11,9 @@ jobs:
     steps:
     - uses: Borales/actions-yarn@master
     - name: Yarn install
-      run:
-        yarn install
-        
+    
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run:
+        yarn install
         docker build . --file Dockerfile --tag my-image-name:$(date +%s)
