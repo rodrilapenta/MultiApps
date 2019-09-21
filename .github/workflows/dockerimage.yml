@@ -10,6 +10,7 @@ jobs:
  
     steps:
     - name: Yarn install
+    - uses: Borales/actions-yarn@master
       run:
         yarn install
         
