@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-    - uses: Borales/actions-yarn@master
-    - name: Yarn install
-    
     - uses: actions/checkout@v1
-    - name: Build the Docker image
+    - name: Checkout project
+    
+    - uses: Borales/actions-yarn@master
+    - name: Yarn install & Build the Docker image
       run:
         yarn install
         docker build . --file Dockerfile --tag my-image-name:$(date +%s)
